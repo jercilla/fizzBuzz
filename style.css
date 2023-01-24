@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 4em);
+  margin: 2em;
+}
+nav button {
+  width: 30%;
+  height: 2rem;
+  font-weight: bold;
+}
+.test-ok {
+  color: green;
+}
+.test-ok::before {
+  content: '✓ ';
+}
+
+.test-fail {
+  color: red;
+}
+.test-fail::before {
+  content: '✗ ';
+}
+
+.test-message {
+  margin-left: 2em;
+  color: red;
+}
