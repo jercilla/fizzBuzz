@@ -1,13 +1,17 @@
 /*
   By josu.oyanguren@gmail.com
+    +joseba.ercilla@gailen.es
 */
-function check(result, expected, message) {
+function check(given, fizzBuzz, expected) {
+  let actual = fizzBuzz(given)
+console.log(actual)
+  let message = `Dado ${given}, cuando calculamos su fizzBuzz, obtendremos ${expected}`
   let outputNode = document.querySelector('#output')
   let className = 'test-ok'
   let testMessage = ''
-  if (result !== expected) {
+  if (actual !== expected) {
     className = 'test-fail'
-    testMessage = `\n              expected ${expected} but was ${result}`
+    testMessage = `\n              Se esperaba ${expected}, pero el resultado es ${actual}`
   }
   outputNode.innerHTML += `<div class="${className}">${message}</div>`
   outputNode.innerHTML += `<div class="test-message">${testMessage}</div>`
